@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Metatags, links CSS, etc. -->
+</head>
+<body>
+    <!-- Cabeçalho, menu, e outras partes do HTML -->
+
+    <div class="container">
+        <h2>Resultados da Busca</h2>
+        <div th:if="${resultados.empty}">
+            <p>Nenhum resultado encontrado.</p>
+        </div>
+        <div th:each="viagem : ${resultados}">
+            <!-- Detalhes -->
+            <div>
+                <h3 th:text="${viagem.destino}"></h3>
+                <p th:text="${viagem.preco}"></p>
+                <!-- Outros detalhes da viagem -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+</body>
+</html>
+<!-- DESISTI -->
